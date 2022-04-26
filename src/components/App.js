@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
+//what is state?-dta inside component
+//what is props? data passed from parent to child
+
 // 👉 STEP 2 - React Router imports (Route, Link and Switch)
+import {Route, Link} from 'react-router-dom'
 
 // Components used for the different routes
 import Home from './Home'
@@ -27,6 +31,8 @@ export default function App(props) {
         <h1 className='store-header'>Emily&apos;s Trinkets</h1>
         <div className='nav-links'>
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`/items-list`) */}
+        <Link to ="/">Home</Link>
+        <Link to ="/items-list">Shop</Link>
         </div>
       </nav>
 
