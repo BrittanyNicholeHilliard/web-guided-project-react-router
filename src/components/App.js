@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 //what is state?-dta inside component
 //what is props? data passed from parent to child
 
