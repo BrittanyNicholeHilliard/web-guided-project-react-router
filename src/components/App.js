@@ -3,8 +3,12 @@ import styled from 'styled-components'
 //what is state?-dta inside component
 //what is props? data passed from parent to child
 
+const WrapperComp = styled.h1`
+color: ${props => props.theme.primaryColor}
+`
+
 // 👉 STEP 2 - React Router imports (Route, Link and Switch)
-import {Route, Link} from 'react-router-dom'
+import {Route, Link, Switch} from 'react-router-dom'
 
 // Components used for the different routes
 import Home from './Home'
@@ -36,7 +40,17 @@ export default function App(props) {
         <Link to ="/items-list">Shop</Link>
         </div>
       </nav>
-
+      <Switch>
+      <Route path={"/items-list/:itemID"}>
+        <Item items={stock} />
+      </Route>
+      <Route path="/items-list">
+        <ItemsList items={stock} />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+      </Switch>
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
     </div>
   )

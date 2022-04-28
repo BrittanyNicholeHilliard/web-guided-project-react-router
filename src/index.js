@@ -13,7 +13,7 @@ import { BrowserRouter as Router} from 'react-router-dom'
 
 render(
   // Wrap the <App /> in a provider
-  <Router> 
+  <Router>
   <App />
   </Router>
   , document.querySelector('#root')
@@ -23,5 +23,5 @@ render(
  * history-info about where you've been
  * location - info about where you are
  * match-info about where url is
- * 
+ *
  */
